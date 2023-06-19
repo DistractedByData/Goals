@@ -1,6 +1,7 @@
+# To do list - App 
 import os
 
-# ToDoList class
+# Create a todolist class
 class ToDoList:
 
   def __init__(self):
@@ -42,7 +43,7 @@ class ToDoList:
       print("There are no tasks in the task list")
     else:
       completed_task = self.tasks[task_num - 1]
-      self.set_status('Completed')
+      completed_task['Status'] = 'Completed'
       self.completed.append(completed_task)
       del self.tasks[task_num - 1]
       print(f"Task {task_num} has been marked as completed - great job!")
@@ -65,16 +66,12 @@ class ToDoList:
     if task_num > len(self.tasks):
       print("There are no tasks in the task list")
     else:
-      failed_task = self.tasks[tasknum - 1]
-      self.failed.append(failed_task)
-      del self.tasks[num - 1]
+      failed_task = self.tasks[task_num - 1]
+      failed_task['Status'] = 'Failed'
+      del self.tasks[task_num - 1]
       print(f"Task {task_num} has been marked as failed - Don't worry, the day is not over!")
 
-  def set_status(self,status):
-    self.status = status
-
-
-# Main function
+# Write Main function
 def Main():
   to_do_list = ToDoList()
   while True:
