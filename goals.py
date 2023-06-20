@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 
 class ToDoList:
 
@@ -26,15 +27,24 @@ class ToDoList:
     else:
       print("\n Current Task List:")
       for i, task in enumerate(self.tasks, start=1):
-        print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}")
+        print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}\n")
         if i == len(self.tasks):
           print("\n")
 
-  def save_tasks(self, filename):
-    with open(filename, "w") as file:
-      for i, task in enumerate(self.tasks, start=1):
-        file.write(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}\n")
-    print(f"Your To-Do List saved to {os.path.abspath(filename)}")
+
+def save_tasks(self):
+    now = datetime.now()
+    month = now.strftime("%B")
+    year = str(now.year)
+    filename = f"{month}{now.strftime('%d')}.txt"
+    desktop_path = str(Path.home() / "Desktop")
+    folder_path = os.path.join(desktop_path, year, month)
+    os.makedirs(folder_path, exist_ok=True)
+    file_path = os.path.join(folder_path, filename)
+    with open(file_path, "w") as file:
+        for i, task in enumerate(self.tasks, start=1):
+            file.write(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}\n")
+    print(f"Your To-Do List saved to {os.path.abspath(file_path)}")
 
   def update_to_completed(self, task_num):
     if task_num > len(self.tasks):
@@ -49,14 +59,14 @@ class ToDoList:
   def list_completed(self):
     print("\n Completed Task List:")
     for i, task in enumerate(self.completed, start=1):
-      print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}")
+      print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}\n")
       if i == len(self.completed):
         print("\n")
 
   def list_failed(self):
     print("\n Failed Task List:")
     for i, task in enumerate(self.failed, start=1):
-      print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}")
+      print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}\n")
       if i == len(self.completed):
         print("\n")
 
@@ -92,8 +102,7 @@ def Main():
         elif list_choice == 3:
           to_do_list.list_failed()
       elif choice == 4:
-        filename = input("What do you want to name the file: ")
-        to_do_list.save_tasks(filename)
+        to_do_list.save_tasks()
       elif choice == 5:
         task_to_modify = int(input("Enter the task number you want to update the status for: "))
         new_status = int(input("Enter 1 if you completed the task. Enter 2 if you failed: "))
