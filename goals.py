@@ -32,19 +32,19 @@ class ToDoList:
           print("\n")
 
 
-def save_tasks(self):
-    now = datetime.now()
-    month = now.strftime("%B")
-    year = str(now.year)
-    filename = f"{month}{now.strftime('%d')}.txt"
-    desktop_path = str(Path.home() / "Desktop")
-    folder_path = os.path.join(desktop_path, year, month)
-    os.makedirs(folder_path, exist_ok=True)
-    file_path = os.path.join(folder_path, filename)
-    with open(file_path, "w") as file:
-        for i, task in enumerate(self.tasks, start=1):
-            file.write(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}\n")
-    print(f"Your To-Do List saved to {os.path.abspath(file_path)}")
+  def save_tasks(self):
+      now = datetime.now()
+      month = now.strftime("%B")
+      year = str(now.year)
+      filename = f"{month}{now.strftime('%d')}.txt"
+      desktop_path = str(Path.home() / "Desktop")
+      folder_path = os.path.join(desktop_path, year, month)
+      os.makedirs(folder_path, exist_ok=True)
+      file_path = os.path.join(folder_path, filename)
+      with open(file_path, "w") as file:
+          for i, task in enumerate(self.tasks, start=1):
+              file.write(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}\n")
+      print(f"Your To-Do List saved to {os.path.abspath(file_path)}")
 
   def update_to_completed(self, task_num):
     if task_num > len(self.tasks):
