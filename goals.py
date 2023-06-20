@@ -16,7 +16,7 @@ class ToDoList:
 
   def remove_task(self, num):
     if num <= int(len(self.tasks)):
-      del self1.tasks[num - 1]
+      del self.tasks[num - 1]
     else:
       print("Error: Task number does not exist.")
   
@@ -26,14 +26,14 @@ class ToDoList:
     else:
       print("\n Current Task List:")
       for i, task in enumerate(self.tasks, start=1):
-        print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}")
+        print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}\n")
         if i == len(self.tasks):
           print("\n")
 
   def save_tasks(self, filename):
     with open(filename, "w") as file:
       for i, task in enumerate(self.tasks, start=1):
-        file.write(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}")
+        file.write(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}\n")
     print(f"Your To-Do List saved to {os.path.abspath(filename)}")
 
   def update_to_completed(self, task_num):
@@ -49,14 +49,14 @@ class ToDoList:
   def list_completed(self):
     print("\n Completed Task List:")
     for i, task in enumerate(self.completed, start=1):
-      print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}")
+      print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}\n")
       if i == len(self.completed):
         print("\n")
 
   def list_failed(self):
     print("\n Failed Task List:")
     for i, task in enumerate(self.failed, start=1):
-      print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}")
+      print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}\n")
       if i == len(self.completed):
         print("\n")
 
@@ -73,7 +73,7 @@ class ToDoList:
 def Main():
   to_do_list = ToDoList()
   while True:
-    print("Goals - a super simple task manager\n1. Add task\n2. Delete task\n3. List tasks\n4. Save tasks\n5. Update a task's status\n6. Quit")
+    print("\nGoals - a super simple task manager\n1. Add task\n2. Delete task\n3. List tasks\n4. Save tasks\n5. Update a task's status\n6. Quit")
     try:
       choice = int(input("Which option do you want: "))
       if choice == 1:
