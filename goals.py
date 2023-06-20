@@ -26,7 +26,7 @@ class ToDoList:
     else:
       print("\n Current Task List:")
       for i, task in enumerate(self.tasks, start=1):
-        print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}\n")
+        print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}")
         if i == len(self.tasks):
           print("\n")
 
@@ -49,14 +49,14 @@ class ToDoList:
   def list_completed(self):
     print("\n Completed Task List:")
     for i, task in enumerate(self.completed, start=1):
-      print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}\n")
+      print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}")
       if i == len(self.completed):
         print("\n")
 
   def list_failed(self):
     print("\n Failed Task List:")
     for i, task in enumerate(self.failed, start=1):
-      print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}\n")
+      print(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}")
       if i == len(self.completed):
         print("\n")
 
