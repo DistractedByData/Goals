@@ -19,12 +19,13 @@ You can download the 'goals.py' file from the repository by [clicking here](http
 
 ### Step 2: Run 'goals.py'
 
-**Terminal or Command Prompt:** On Mac, you'll use the **Terminal** application, while on Windows, you'll use the **Command Prompt** or **PowerShell**.
+i) **Terminal or Command Prompt:** On Mac, you'll use the **Terminal** application, while on Windows, you'll use the **Command Prompt** or **PowerShell**.
 
-**Changing Directories:** Use the 'cd' command to navigate to the folder where the 'goals.py' file is saved. 
+ii) **Changing Directories:** Use the `cd` command to navigate to the folder where the 'goals.py' file is saved. 
 > Make sure to provide the correct path to the folder containing the file.
 
-**Running the Python Script:** Once you are in the correct folder containing the 'goals.py' file, type `python goals.py` in the terminal or command prompt and press Enter. This command executes the Python script.
+iii) **Running the Python Script:** Once you are in the correct folder containing the 'goals.py' file, type `python goals.py` in the terminal or command prompt and press Enter. This command executes the Python script.
 
+#### All set - you can now begin logging your tasks!
 ---
 *Python Installation:* Verify that Python is installed on your computer. You can check this by typing 'python' or 'python --version' in the terminal or command prompt. If Python is not installed, you can download and install it from the official [Python website](https://www.python.org).
