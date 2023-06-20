@@ -1,5 +1,6 @@
 import os
 from datetime import datetime
+from pathlib import Path
 
 class ToDoList:
 
@@ -36,9 +37,10 @@ class ToDoList:
       now = datetime.now()
       month = now.strftime("%B")
       year = str(now.year)
+      folder_name = f"Goals - {year}"
       filename = f"{month}{now.strftime('%d')}.txt"
       desktop_path = str(Path.home() / "Desktop")
-      folder_path = os.path.join(desktop_path, year, month)
+      folder_path = os.path.join(desktop_path, folder_name, month)
       os.makedirs(folder_path, exist_ok=True)
       file_path = os.path.join(folder_path, filename)
       with open(file_path, "w") as file:
