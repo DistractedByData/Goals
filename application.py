@@ -35,7 +35,7 @@ class ToDoList:
   def save_tasks(self, filename):
     with open(filename, "w") as file:
       for i, task in enumerate(self.tasks, start=1):
-        file.write(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}")
+        file.write(f"{i}. {task['Task']} | Category: {task['Category']} | Status: {task['Status']}\n")
     print(f"Your To-Do List saved to {os.path.abspath(filename)}")
 
   def update_to_completed(self, task_num):
