@@ -5,15 +5,16 @@ Goals is a very basic but effective task manager or to-do list app. I say that i
 
 ## My Motivation
 
+<br>
 I was feeling frustrated this morning because I tend to write down ideas I want to work on, but in different places, which leads me to eventually forget where I left what I need when I need it. So, I thought to myself - what is a simple way I can solve this?
 
 The answer I landed on was to write a Python program that functions as a task manager app. I figured that many of these ideas I have and would want to work on, occur to me when I am at my desk, so having a basic program on my computer would definitely work! 
-
+</br>
 ---
 
-
+<br>
 ## Getting Started with 'goals.py'
-
+</br)
 'goals.py' is the only file you require. So to use it, simply follow these steps:
 
 ### Step 1: Download 'goals.py'
