@@ -16,7 +16,7 @@ The answer I landed on was to write a Python program that functions as a task ma
 
 ### Step 1: Download 'goals.py'
 
-You can download the 'goals.py' file from the repository by [clicking here](https://github.com/SoManyDistractions/Now-or-Never/blob/main/goals.py). You can save it in any location of your choice.
+You can download the 'goals.py' file from the repository by [clicking here](https://github.com/SoManyDistractions/Goals/blob/main/goals.py). You can save it in any location of your choice.
 
 ### Step 2: Run 'goals.py'
 
