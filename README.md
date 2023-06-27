@@ -1,31 +1,26 @@
-# Goals: A Super Simple Task Manager (for CLI)
+# Goals: A Simple Task Manager
 
-Goals is a very basic but effective task manager or to-do list app. I say that its simplicity is a feature and not a bug. 
+This morning, I found myself feeling frustrated. I often jot down ideas I want to work on, but in various places. Consequently, I often forget where I've placed what I need when I need it. This led me to a question - how can I solve this in a simple way?
 
-## My Motivation
+The solution I came up with was to develop a Python program that functions as a task manager app. Many of the ideas I have and wish to pursue occur when I'm at my desk. So, having a basic program on my computer seems like the perfect solution!
 
-I was feeling frustrated this morning because I tend to write down ideas I want to work on, but in different places, which leads me to eventually forget where I left what I need when I need it. So, I thought to myself - what is a simple way I can solve this?
+'goals.py' is the only file you need. To use it, simply follow these steps:
+      
+      update: try 'goals2.py', it displays with a more intuitive GUI compared to using the CLI.  
+## Step 1: Download 'goals.py'
 
-The answer I landed on was to write a Python program that functions as a task manager app. I figured that many of these ideas I have and would want to work on, occur to me when I am at my desk, so having a basic program on my computer would definitely work! 
+You can download the 'goals.py' file from the repository [here](https://github.com/SoManyDistractions/Goals/blob/main/goals.py). Save it in any location of your choice.
 
+## Step 2: Run 'goals.py'
+Python Installation: Ensure that Python is installed on your computer. You can check this by typing `python` or `python --version` in the terminal or command prompt. If Python is not installed, you can download and install it from the [official Python website](https://www.python.org/downloads/).
 
-## Getting Started with 'goals.py'
+i) Terminal or Command Prompt: On a Mac, use the Terminal application, and on Windows, use the Command Prompt or PowerShell.
 
-'goals.py' is the only file you require. So to use it, simply follow these steps:
+ii) Changing Directories: Use the cd command to navigate to the folder where the 'goals.py' file is stored.
 
-### Step 1: Download 'goals.py'
+    e.g. cd desktop
 
-You can download the 'goals.py' file from the repository by [clicking here](https://github.com/SoManyDistractions/Goals/blob/main/goals.py). You can save it in any location of your choice.
+iii) Running the Python Script: Once you're in the correct folder containing the 'goals.py' file, type python goals.py in the terminal or command prompt and press Enter. This command executes the Python script.
+All set - you can now begin logging your tasks!
 
-### Step 2: Run 'goals.py'
-
-i) **Terminal or Command Prompt:** On Mac, you'll use the **Terminal** application, while on Windows, you'll use the **Command Prompt** or **PowerShell**.
-
-ii) **Changing Directories:** Use the `cd` command to navigate to the folder where the 'goals.py' file is saved. 
-> Make sure to provide the correct path to the folder containing the file.
-
-iii) **Running the Python Script:** Once you are in the correct folder containing the 'goals.py' file, type `python goals.py` in the terminal or command prompt and press Enter. This command executes the Python script.
-
-#### All set - you can now begin logging your tasks!
----
-*Python Installation:* Verify that Python is installed on your computer. You can check this by typing 'python' or 'python --version' in the terminal or command prompt. If Python is not installed, you can download and install it from the official [Python website](https://www.python.org).
+`python3 goals.py`
